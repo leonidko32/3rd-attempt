@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgray;
+}
+.card{
+    width: 350px;
+    height: 515px;
+    background-color: white;
+    border-radius: 8px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 37px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+}
+img{
+    width: 280px;
+    height: 270px;
+    border-radius: 8px;
+    object-fit:fill;
+    
+}
+.label{
+    text-transform: uppercase;
+    color: #B4B4B4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;    
+    letter-spacing: 2px;
+    mix-blend-mode: normal;
+}
+.text{
+margin-top: 8px;
+margin-bottom: 26px;
+font-family: Arial, Helvetica, sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+color: #262626;
+}
+.button{
+    display: inline-block;
+    background-color: #EC6732;
+    border-radius: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    height: 24px;
+    width: 80px;
+    line-height: 24px;
+    margin-top: 26px;
+    margin-right: 13px;
+    cursor: pointer;
+    
+}
