@@ -1,0 +1,15 @@
+h1, h2{
+    text-align: center;
+}
+td{
+    border: solid black;
+    text-align: center;
+    width: 100px;
+}
+table{
+    border-collapse: collapse;
+}
+thead{
+    background-color: lightgray;
+    font-weight: bold;
+}

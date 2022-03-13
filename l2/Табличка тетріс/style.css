@@ -1,0 +1,56 @@
+table {
+    border-collapse: collapse;    
+    border: solid black 2px;
+}
+
+.column{
+    border: solid rgb(234, 234, 234) 1px;
+    height: 20px; 
+    width: 20px;
+
+}
+
+tbody :nth-child(n+9) :nth-child(n+7) {
+    background: red;
+    border-color:  red;
+} 
+tbody :nth-child(n+5):nth-child(-n+8) :first-child{
+    background: rgb(17, 59, 138);
+    border-color: rgb(17, 59, 138);
+}
+tbody :nth-child(9) :nth-child(-n+3){
+    background: rgb(138, 7, 13);
+    border-color: rgb(138, 7, 13);;
+}
+tbody :nth-child(n+10) :nth-child(3){
+    background: rgb(138, 7, 13);
+    border-color: rgb(138, 7, 13);;
+}
+tbody :nth-child(n+10) :nth-child(-n+2){
+    background: rgb(98, 205, 232);
+    border-color: rgb(98, 205, 232);
+}
+tbody :nth-child(n+10) :nth-child(4){
+    background: rgb(253, 123, 35);
+    border-color: rgb(253, 123, 35);
+}
+tbody :nth-child(11) :nth-child(n+5):nth-child(-n+6){
+    background: rgb(253, 123, 35);
+    border-color: rgb(253, 123, 35);
+}
+tbody :nth-child(n+3):nth-child(-n+4) :nth-child(4){
+    background: rgb(42, 139, 28);
+    border-color: rgb(42, 139, 28);
+}
+tbody :nth-child(n+4):nth-child(-n+5) :nth-child(3){
+    background: rgb(42, 139, 28);
+    border-color: rgb(42, 139, 28);
+}
+tbody :nth-child(8) :nth-child(n+3):nth-child(-n+4){
+    background: rgb(42, 139, 28);
+    border-color: rgb(42, 139, 28);
+}
+tbody :nth-child(9) :nth-child(n+4):nth-child(-n+5){
+    background: rgb(42, 139, 28);
+    border-color: rgb(42, 139, 28);
+}
