@@ -114,4 +114,15 @@ button:active{
     color: blueviolet;
     
 }
+svg{
+    width: 15px;
+}
+
+.test__star--1 .star:nth-child(1),
+.test__star--2 .star:nth-child(-n+2),
+.test__star--3 .star:nth-child(-n+3),
+.test__star--4 .star:nth-child(-n+4),
+.test__star--5 .star:nth-child(-n+5){
+    fill: gold;
+} 
 
