@@ -1,0 +1,198 @@
+
+    .first{
+        display: flex;
+        }
+        .first .plain{
+            flex: 1 0 22%;
+    }
+    .second{
+            display: flex;
+    }
+        .second .colored{
+            flex: 1 0 40%;
+    }
+    .third{
+        display: flex;
+        justify-content: space-between;
+    }
+        .third .colored{
+            flex: 0 0 25%;
+            
+        }
+    .fourth{
+            display: flex;
+        }
+        .fourth .colored:first-child{
+            flex: 1 1 25%;
+        }
+        .fourth .colored:nth-child(2){
+            flex: 1 1 25%;
+        }
+        .fourth .colored:nth-child(3){
+            flex: 1 1 50%;
+    }
+    .fifth{
+            display: flex;
+        }
+        .fifth .colored{
+            flex: 1 0 0%;
+    }            
+@media(min-width:1200px) and (max-width:1799px){
+    .first{
+        display: flex;
+        flex-wrap: wrap;
+    }
+        .first .plain{
+            flex: 1 0 45%;
+        }
+    .third{        
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+        .third .colored:nth-child(1){
+            flex: 0 0 50%;                
+        }
+        .third .colored:nth-child(2){
+            flex: 0 0 50%;                
+        }
+        .third .colored:nth-child(3){
+            flex: 0 0 100%;                
+        }
+    /*fourth*/
+        .fourth .colored:first-child{
+            flex: 1 1 35%;
+        }
+        .fourth .colored:nth-child(2){
+            flex: 1 1 30%;
+        }
+        .fourth .colored:nth-child(3){
+            flex: 1 1 35%;
+        }
+    .fifth{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+        .fifth .colored{
+            flex: 0 1 33%;
+        }            
+}
+@media(min-width:960px) and (max-width:1199px){
+    .first{
+        display: flex;
+        flex-wrap: wrap;
+    }
+        .first .plain{
+            flex: 1 0 45%;
+        }
+    .third{
+        display: flex;
+    }
+        .third .colored{
+            flex: 1 0 30%;            
+        }
+    /*fourth*/
+        .fourth .colored:first-child{
+            flex: 1 1 35%;
+        }
+        .fourth .colored:nth-child(2){
+            flex: 1 1 30%;
+        }
+        .fourth .colored:nth-child(3){
+            flex: 1 1 35%;
+        }
+    .fifth{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .fifth .colored{
+            flex: 1 0 45%;
+        }
+        .fifth .colored:last-child{
+            flex: 1 0 100%;
+        }            
+}
+@media(min-width:768px) and (max-width:959px){
+    .first{
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+        .first .plain{
+            flex: 0 0 50%;
+        }
+    .second{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+        .second .colored{
+            flex: 0 0 50%;
+        }
+    .third{
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .third .colored{
+            flex: 1 0 90%;                
+        }
+     .fourth{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .fourth .colored:first-child{
+            flex: 0 0 50%;
+        }
+        .fourth .colored:nth-child(2){
+            flex: 0 0 50%;;
+        }
+        .fourth .colored:nth-child(3){
+            flex: 0 1 100%;
+    }
+    .fifth{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+        .fifth .colored{
+            flex: 1 0 45%;
+        }
+        .fifth .colored:last-child{
+            flex: 1 0 100%;
+        }            
+}
+@media(max-width:767px){
+    .first{
+        justify-content: center;
+        flex-wrap: wrap;
+        }
+        .first .plain{
+            flex: 0 0 50%;
+        }
+    .second{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+        .second .colored{
+            flex: 0 0 50%;
+        }
+    .third{
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .third .colored{
+            flex: 1 0 90%;                
+        }
+    .fourth{
+        flex-wrap: wrap;
+        }
+        .fourth .colored:nth-child(-n+3){
+            flex: 0 1 100%;
+        }
+    .fifth{
+        flex-wrap: wrap;
+        }
+        .fifth .colored:nth-child(-n+5){
+            flex: 1 0 100%;
+        }               
+
+}
