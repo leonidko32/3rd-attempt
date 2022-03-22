@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let surname = "sur";
+        const userInfo = {
+            name: "Pavlo",
+            "group number":"9",
+            [surname]:"shevcjenko"
+        }
+        userInfo[surname] = "Petrovycj";
+        //delete userInfo.sur;
+        //console.log(userInfo);
+
+        const userInfoCopy = {}
+
+
+        for(const key in userInfo){
+            userInfoCopy[key]=userInfo[key];
+        }
+        
+        //console.log(userInfoCopy);
+        
+        const userInfoCopy2 = {}
+        //console.log(userInfoCopy2);
+        
+        function isEmpty(obj){ 
+        let count = 0;
+        for(const key in obj){
+            count++;
+        }
+        //console.log("Object length is "+count);        
+        }
+
+        const arr = ["hello","it`s me", "i was wondering"]
+        arr.push("apple");
+        //console.log(arr);
+
+        function includes(array, value){
+            for(let key = 0; key<array.length; key++){
+                if(array[key]===value){
+                    return true;
+                }        
+            }
+            return false;
+        }
+        //console.log(includes(arr,"apple"));
+
+        const grade = {
+            Anton: getRandomBall(0, 90),
+            Maksym: 90,
+            Vladyslav:getRandomBall(),
+            Oleksii:getRandomBall(40),
+            Vadim:getRandomBall(40,70),
+            Maxim:getRandomBall(15,80)
+        };
+
+        function getRandomBall (min=0, max=100){
+            return Math.round(min+Math.random() * (max-min));
+        }
+        console.log(grade);
+        let n =2;
+
+        function getLeader(b){
+            let leader =0;
+            let l;
+            for(key in b){
+                if(b[key]>leader){
+                    leader=b[key];
+                    l = key;
+                }
+
+            }
+            return l+" "+leader;
+        }
+        //console.log(getLeader(grade));
+
+        function getAverage(b){
+            let total =0;
+            count = 0;
+            for(key in b){
+                total+= b[key];
+                count++;
+            }
+                
+            return Math.round(total/count);
+        }
+
+        console.log(getAverage(grade));
+
+        function AverageStudent(b){
+            let gap = 100;
+            let AverScore = getAverage(b);
+            let AverStudent;
+            for(key in b){
+                if(Math.abs(b[key]-AverScore)<gap){
+                    gap = Math.abs(b[key]-AverScore);
+                    AverStudent=key;
+                }
+            }
+            return AverStudent;
+        }
+      //  console.log(AverageStudent(grade));
+      
+      function UnderAverageStudent(b){
+            const UnderAverage = [];
+            let AverScore = getAverage(b);
+            for(key in b){
+                if(b[key]<AverScore){
+                    UnderAverage.push(key);
+                }
+            }
+            return UnderAverage;
+        }
+       // console.log(UnderAverageStudent(grade));
+
+      const gradeArray = [];
+      function create (arr){
+          for(key in arr){
+            gradeArray.push({score:arr[key],name:key});
+
+          }
+      }
+      create(grade);
+      console.log(gradeArray);
+
+      const listNew = gradeArray.filter(function (e){
+          return e.score>getAverage(grade);
+      });
+      const gradeSort = gradeArray.sort(function(a,b){
+          return  b.score-a.score;
+      });
+
+      gradeSort.length=3;
+
+
+
+
+
+      console.log(gradeSort);
+      
+    
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
