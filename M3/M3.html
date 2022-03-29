@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="M3.js" defer></script>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color:gray;
+            padding: 5px;
+        }
+        .timer{
+            width: 100%;
+            flex: 1 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .text{
+            font-size: 25px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="clock timer text">
+        <div class="text"> Поточиний час:</div>
+        <div class="text"  id="clock"> 00:00:00</div>
+    </div>
+    <div class="timer">
+        <div class="text"> До нового року залишилось:</div>
+        <div class="text"  id="NewYaer"> 20 днів 12 годин 53 хвили 45 секунд</div>
+    </div>
+    <div class="timer" >
+        <div class="text"> До китайського нового року залишилось:</div>
+        <div class="text" id="ChinaNewYaer"> 20 днів 12 годин 53 хвили 45 секунд</div>
+    </div>
+
+    
+</body>
+</html>
