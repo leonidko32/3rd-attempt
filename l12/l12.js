@@ -82,17 +82,14 @@ function arrToObj(arr){
 game.drawBoard();
 //game.drawBoard90();
 
-
-const clicking2 = document.querySelector(".clicking2");
-
-const clicking1 = document.querySelector(".clicking1");
-clicking1.addEventListener('click',()=>console.log(clicking1.innerText));
-clicking2.addEventListener('click',()=>console.log(clicking2.innerText));
-
-document.addEventListener('keydown', (event)=>console.log(event.key));
+// const clicking2 = document.querySelector(".clicking2");
+// const clicking1 = document.querySelector(".clicking1");
+// clicking1.addEventListener('click',()=>console.log(clicking1.innerText));
+// clicking2.addEventListener('click',()=>console.log(clicking2.innerText));
+// document.addEventListener('keydown', (event)=>console.log(event.key));
 
 
-
+createElement
 
 
 
