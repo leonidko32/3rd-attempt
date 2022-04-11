@@ -181,11 +181,20 @@ return timerP;
 //console.log(addZero(10));
 //console.log(timerP);
 
+
+//timer----------------------------------------
 const t = createElement("span",{
     innerText: finalCountdown()
 })
 
 let a = document.querySelector('.timer');
 setInterval(function(){ a.innerText = finalCountdown()},1000);
+//---------------------------------------------
 
+function ap (price){
+    let m = document.querySelector('.container');
+    m.append(createElement('div',{className: 'ticket', innerText:numberWithSpaces(price)+' P'}));
+}
+
+tickets.map(i=>ap(i.price));
 

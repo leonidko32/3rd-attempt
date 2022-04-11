@@ -169,6 +169,7 @@ button:active{
         display: flex;  /*flex*/
     }
     .header{
+        flex: 0 0 auto;
         flex-direction: column;
     }
     .header__buttonContainer{
@@ -177,15 +178,31 @@ button:active{
     }
     .header__menu{
         display: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     #burger__checkbox:checked ~ .header__menu{
         display: flex;
     }
     .middle__container{
-        padding-top: 40%;
         padding-left: 5%;
         padding-right: 5%;
         align-items: flex-start;
+
+    }
+    .middle__container{
+        flex: 1 1 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left:10px;
+        padding-right: 10px;
+        height: auto;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
     }
 
 }
