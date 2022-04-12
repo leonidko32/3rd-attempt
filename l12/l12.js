@@ -1,6 +1,6 @@
 
 const game = {}
-game.board = [1,2,3,4,5,6,7,8,"e"].sort(()=> Math.random() - 0.5);
+game.board = [1,2,3,4,5,6,7,8," "].sort(()=> Math.random() - 0.5);
 game.boardObj = arrToObj(game.board);
 game.drawBoard = function drawBoard(){
     for(let a =0; a<3; a++){
@@ -9,19 +9,20 @@ game.drawBoard = function drawBoard(){
             row += this.boardObj[i]+" ";
         }
         console.log(row);
+        game.renderBoard();
     }
     return "Your move";
 }
 game.possibleMove =  function possibleMove(){
     const possibleMoveArr = [];
     for(let i = 0; i<9; i++){
-        if(this.boardObj[i-1]==='e' && i !==0 && i !==3 && i !==6){
+        if(this.boardObj[i-1]===' ' && i !==0 && i !==3 && i !==6){
             possibleMoveArr.push({index:i, number:this.boardObj[i],move:"LEFT"});
-        }else if(this.boardObj[i+1]==='e' && i !==2 && i !==5 && i !==8){
+        }else if(this.boardObj[i+1]===' ' && i !==2 && i !==5 && i !==8){
             possibleMoveArr.push({index:i, number:this.boardObj[i],move:"RIGHT"});
-        }else if(this.boardObj[i-3]==='e' && i !==0 && i !==1 && i !==2){
+        }else if(this.boardObj[i-3]===' ' && i !==0 && i !==1 && i !==2){
             possibleMoveArr.push({index:i, number:this.boardObj[i],move:"TOP"});
-        }else if(this.boardObj[i+3]==='e' && i !==6 && i !==7 && i !==8){
+        }else if(this.boardObj[i+3]===' ' && i !==6 && i !==7 && i !==8){
             possibleMoveArr.push({index:i, number:this.boardObj[i],move:"DOWN"});
         }else possibleMoveArr.push({index:i, number:this.boardObj[i],move:null});
     } 
@@ -33,16 +34,16 @@ game.move = function move(number){
         if(this.possibleMoveArr[i].number === number && this.possibleMoveArr[i].move !== null){
             if(this.possibleMoveArr[i].move === "LEFT"){
                 this.boardObj[i-1]=number;
-                this.boardObj[i]="e";
+                this.boardObj[i]=" ";
             }else if(this.possibleMoveArr[i].move === "RIGHT"){
                 this.boardObj[i+1]=number;
-                this.boardObj[i]="e";
+                this.boardObj[i]=" ";
             }else if(this.possibleMoveArr[i].move === "TOP"){
                 this.boardObj[i-3]=number;
-                this.boardObj[i]="e";
+                this.boardObj[i]=" ";
             }else if(this.possibleMoveArr[i].move === "DOWN"){
                 this.boardObj[i+3]=number;
-                this.boardObj[i]="e";
+                this.boardObj[i]=" ";
             }else console.log("can`t move that number");
         }
     }
@@ -63,6 +64,21 @@ game.drawBoard90 = function drawBoard90(){
         console.log(row);
     }
     return "Your move";
+}
+game.renderBoard = function(){
+    const arr =[];
+    for(let i=0; i<=8; i++){           
+        const el = createElement('div', props= {className:"cell"}, game.boardObj[i]); 
+        if(game.boardObj[i]===' '){
+            el.classList.add('empty');
+        }
+        if(game.possibleMoveArr[i].move !== null){
+            el.classList.add('move');
+        }   
+        el.addEventListener('click',()=>game.move(+el.innerText));
+        arr.push(el);
+    }
+    return render(arr, document.querySelector('.board'));
 }
 
 
@@ -89,7 +105,10 @@ game.drawBoard();
 // document.addEventListener('keydown', (event)=>console.log(event.key));
 
 
-createElement
+// const mainBoard = document.querySelector('.board');
+// console.log(mainBoard);
+
+
 
 
 

@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    transition: all 0.5s;
 }
 .board{
     position: relative;
@@ -8,6 +9,8 @@
     margin: 20px auto;
     border: solid black;
     box-shadow: 0px 0px 8px 6px rgba(0,0,0,0.5);
+    
+  
 }
 .cell{
     position:absolute;
@@ -19,10 +22,43 @@
     align-items: center;
     justify-content: center;
     font-size: 10vh;
+    
 }
-.clicking{
+.cell:hover{
+    box-shadow: 0px 0px 15px 5px rgba(255,15,253,0.49);
     cursor: pointer;
 }
-.clicking:hover{
-    box-shadow: 0px 0px 15px 5px rgba(255,15,253,0.49);
+.cell:nth-child(2){
+    left:33%;
+}
+.cell:nth-child(3){
+    left:66%;
+}
+.cell:nth-child(4){
+    top: 33%;
+}
+.cell:nth-child(5){
+    top: 33%;
+    left:33%;
+}
+.cell:nth-child(6){
+    top: 33%;
+    left:66%;
+}
+.cell:nth-child(7){
+    top: 66%;
+}
+.cell:nth-child(8){
+    top: 66%;
+    left:33%;
+}
+.cell:nth-child(9){
+    top: 66%;
+    left:66%;
+}
+.empty{
+    border: none;   
+}
+.move{
+    background-color: rgb(233, 209, 255);   
 }
